@@ -25,7 +25,6 @@ require (
 	github.com/Microsoft/go-winio v0.5.2 // indirect
 	github.com/Microsoft/hcsshim v0.9.3 // indirect
 	github.com/StirlingMarketingGroup/go-namecase v1.0.0 // indirect
-	github.com/Stride-Labs/stride v0.0.7 // indirect
 	github.com/armon/go-metrics v0.4.0 // indirect
 	github.com/avast/retry-go/v4 v4.1.0 // indirect
 	github.com/benbjohnson/clock v1.3.0 // indirect

@@ -10,7 +10,6 @@ import (
 	"strings"
 	"time"
 
-	qstypes "github.com/Stride-Labs/stride/v3/x/interchainquery/types"
 	"github.com/avast/retry-go/v4"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/tx"
@@ -26,6 +25,7 @@ import (
 	ibcexported "github.com/cosmos/ibc-go/v3/modules/core/exported"
 	tmclient "github.com/cosmos/ibc-go/v3/modules/light-clients/07-tendermint/types"
 	"github.com/cosmos/relayer/v2/relayer/provider"
+	qstypes "github.com/soohoio/stayking/x/interchainquery/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/light"
 	tmtypes "github.com/tendermint/tendermint/types"

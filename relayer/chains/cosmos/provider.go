@@ -7,7 +7,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Stride-Labs/stride/v3/x/interchainquery"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	commitmenttypes "github.com/cosmos/ibc-go/v3/modules/core/23-commitment/types"
@@ -16,6 +15,7 @@ import (
 	"github.com/cosmos/relayer/v2/relayer/processor"
 	"github.com/cosmos/relayer/v2/relayer/provider"
 	"github.com/gogo/protobuf/proto"
+	"github.com/soohoio/stayking/x/interchainquery"
 	lens "github.com/strangelove-ventures/lens/client"
 	tmtypes "github.com/tendermint/tendermint/types"
 	"go.uber.org/zap"
