@@ -14,8 +14,8 @@ require (
 	github.com/prometheus/client_golang v1.12.2
 	github.com/soohoio/stayking v1.0.1
 	github.com/spf13/cobra v1.6.1
-	github.com/spf13/viper v1.13.0
-	github.com/strangelove-ventures/lens v0.5.2-0.20220902224051-3b64274cd999
+	github.com/spf13/viper v1.14.0
+	github.com/strangelove-ventures/lens v0.5.2-0.20221212185627-dde22fa11a1c
 	github.com/stretchr/testify v1.8.1
 	github.com/tendermint/tendermint v0.34.24
 	go.uber.org/multierr v1.8.0
@@ -30,6 +30,7 @@ require (
 	github.com/99designs/go-keychain v0.0.0-20191008050251-8e49817e8af4 // indirect
 	github.com/99designs/keyring v1.2.1 // indirect
 	github.com/ChainSafe/go-schnorrkel v0.0.0-20200405005733-88cbf1b4c40d // indirect
+	github.com/InjectiveLabs/sdk-go v1.42.4-lens // indirect
 	github.com/armon/go-metrics v0.4.0 // indirect
 	github.com/benbjohnson/clock v1.3.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -63,7 +64,6 @@ require (
 	github.com/go-kit/kit v0.12.0 // indirect
 	github.com/go-kit/log v0.2.1 // indirect
 	github.com/go-logfmt/logfmt v0.5.1 // indirect
-	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/godbus/dbus v0.0.0-20190726142602-4481cbc300e2 // indirect
 	github.com/golang/glog v1.0.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
@@ -100,7 +100,6 @@ require (
 	github.com/prometheus/client_model v0.2.0 // indirect
 	github.com/prometheus/common v0.34.0 // indirect
 	github.com/prometheus/procfs v0.8.0 // indirect
-	github.com/prometheus/tsdb v0.10.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475 // indirect
 	github.com/regen-network/cosmos-proto v0.3.1 // indirect
 	github.com/sasha-s/go-deadlock v0.3.1 // indirect
