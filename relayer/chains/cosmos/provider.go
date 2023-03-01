@@ -94,7 +94,6 @@ func ChainClientConfig(pcfg *CosmosProviderConfig) *lens.ChainClientConfig {
 		Timeout:        pcfg.Timeout,
 		OutputFormat:   pcfg.OutputFormat,
 		SignModeStr:    pcfg.SignModeStr,
-		ExtraCodecs:    pcfg.ExtraCodecs,
 		Modules:        modules,
 	}
 }
