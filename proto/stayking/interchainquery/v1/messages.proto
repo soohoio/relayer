@@ -6,7 +6,7 @@ import "gogoproto/gogo.proto";
 import "cosmos_proto/cosmos.proto";
 import "tendermint/crypto/proof.proto";
 
-option go_package = "github.com/cosmos/relayer/relayer/chains/cosmos/stayking";
+option go_package = "github.com/soohoio/relayer/relayer/chains/cosmos/stayking";
 
 // MsgSubmitQueryResponse represents a message type to fulfil a query request.
 message MsgSubmitQueryResponse {

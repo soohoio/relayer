@@ -8,6 +8,12 @@ WASMD_VERSION := v0.25.0
 GOPATH := $(shell go env GOPATH)
 GOBIN := $(GOPATH)/bin
 
+containerProtoVer=v0.2
+containerProtoImage=tendermintdev/sdk-proto-gen:$(containerProtoVer)
+containerProtoGen=cosmos-sdk-proto-gen-$(containerProtoVer)
+containerProtoGenSwagger=cosmos-sdk-proto-gen-swagger-$(containerProtoVer)
+containerProtoFmt=cosmos-sdk-proto-fmt-$(containerProtoVer)
+
 all: lint install
 
 ###############################################################################
@@ -102,3 +108,9 @@ build-gaia:
 	@./examples/demo/scripts/build-gaia
 
 .PHONY: two-chains test test-integration ibctest install build lint coverage clean
+
+proto-gen:
+	@echo "Generating Protobuf files"
+	@if docker ps -a --format '{{.Names}}' | grep -Eq "^${containerProtoGen}$$"; then docker start -a $(containerProtoGen); else docker run --name $(containerProtoGen) -v $(CURDIR):/workspace --workdir /workspace $(containerProtoImage) \
+		sh ./scripts/protocgen.sh; fi
+	@go mod tidy
