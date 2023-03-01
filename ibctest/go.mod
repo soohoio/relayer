@@ -5,9 +5,9 @@ go 1.19
 require (
 	github.com/cosmos/cosmos-sdk v0.46.7
 	github.com/cosmos/ibc-go/v5 v5.1.0
-	github.com/soohoio/relayer/v2 v2.0.0
 	github.com/docker/docker v20.10.19+incompatible
 	github.com/moby/moby v20.10.18+incompatible
+	github.com/soohoio/relayer/v2 v2.0.0
 	github.com/strangelove-ventures/ibctest/v5 v5.0.0-20221201055938-fa49178c17eb
 	github.com/stretchr/testify v1.8.1
 	github.com/tendermint/tendermint v0.34.24
@@ -33,7 +33,6 @@ require (
 	github.com/Microsoft/go-winio v0.6.0 // indirect
 	github.com/Microsoft/hcsshim v0.9.4 // indirect
 	github.com/StirlingMarketingGroup/go-namecase v1.0.0 // indirect
-	github.com/soohoio/stayking v1.1.0 // indirect
 	github.com/armon/go-metrics v0.4.0 // indirect
 	github.com/avast/retry-go/v4 v4.3.1 // indirect
 	github.com/aws/aws-sdk-go v1.40.45 // indirect
@@ -56,7 +55,6 @@ require (
 	github.com/cosmos/btcutil v1.0.5 // indirect
 	github.com/cosmos/cosmos-proto v1.0.0-alpha8 // indirect
 	github.com/cosmos/go-bip39 v1.0.0 // indirect
-	github.com/cosmos/gogoproto v1.4.3 // indirect
 	github.com/cosmos/gorocksdb v1.2.0 // indirect
 	github.com/cosmos/iavl v0.19.4 // indirect
 	github.com/cosmos/ledger-cosmos-go v0.12.1 // indirect
@@ -227,10 +225,10 @@ require (
 replace (
 	github.com/ChainSafe/go-schnorrkel => github.com/ChainSafe/go-schnorrkel v0.0.0-20200405005733-88cbf1b4c40d
 	github.com/ChainSafe/go-schnorrkel/1 => github.com/ChainSafe/go-schnorrkel v1.0.0
-	// For this nested module, you always want to replace the parent reference with the current worktree.
-	github.com/soohoio/relayer/v2 => ../
 
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
+	// For this nested module, you always want to replace the parent reference with the current worktree.
+	github.com/soohoio/relayer/v2 => ../
 
 	github.com/vedhavyas/go-subkey => github.com/strangelove-ventures/go-subkey v1.0.7
 )
