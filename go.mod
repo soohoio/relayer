@@ -3,7 +3,6 @@ module github.com/cosmos/relayer/v2
 go 1.19
 
 require (
-	github.com/Stride-Labs/stride/v4 v4.0.4-0.20230104174521-bed03d2c641e
 	github.com/avast/retry-go/v4 v4.3.1
 	github.com/cosmos/cosmos-sdk v0.46.7
 	github.com/cosmos/ibc-go/v5 v5.1.0
@@ -13,6 +12,7 @@ require (
 	github.com/jsternberg/zap-logfmt v1.3.0
 	github.com/juju/fslock v0.0.0-20160525022230-4d5c94c67b4b
 	github.com/prometheus/client_golang v1.12.2
+	github.com/soohoio/stayking v1.1.0
 	github.com/spf13/cobra v1.6.1
 	github.com/spf13/viper v1.14.0
 	github.com/strangelove-ventures/lens v0.6.0
