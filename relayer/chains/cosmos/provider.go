@@ -91,7 +91,7 @@ func ChainClientConfig(pcfg *CosmosProviderConfig) *lens.ChainClientConfig {
 		OutputFormat:   pcfg.OutputFormat,
 		SignModeStr:    pcfg.SignModeStr,
 		ExtraCodecs:    pcfg.ExtraCodecs,
-		Modules:        append([]module.AppModuleBasic{}, lens.ModuleBasics...),
+		Modules:        append([]module.AppModuleBasic{}),
 	}
 }
 
