@@ -24,8 +24,8 @@ import (
 	host "github.com/cosmos/ibc-go/v5/modules/core/24-host"
 	ibcexported "github.com/cosmos/ibc-go/v5/modules/core/exported"
 	tmclient "github.com/cosmos/ibc-go/v5/modules/light-clients/07-tendermint/types"
-	"github.com/cosmos/relayer/v2/relayer/provider"
-	qstypes "github.com/soohoio/stayking/v2/x/interchainquery/types"
+	staykingicqtypes "github.com/soohoio/relayer/v2/relayer/chains/cosmos/stayking"
+	"github.com/soohoio/relayer/v2/relayer/provider"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/light"
 	tmtypes "github.com/tendermint/tendermint/types"
@@ -918,7 +918,7 @@ func (cc *CosmosProvider) MsgSubmitQueryResponse(chainID string, queryID provide
 	if err != nil {
 		return nil, err
 	}
-	msg := &qstypes.MsgSubmitQueryResponse{
+	msg := &staykingicqtypes.MsgSubmitQueryResponse{
 		ChainId:     chainID,
 		QueryId:     string(queryID),
 		Result:      proof.Result,

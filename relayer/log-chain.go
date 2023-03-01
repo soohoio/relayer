@@ -3,8 +3,8 @@ package relayer
 import (
 	"fmt"
 
-	"github.com/cosmos/relayer/v2/relayer/chains/cosmos"
-	"github.com/cosmos/relayer/v2/relayer/provider"
+	"github.com/soohoio/relayer/v2/relayer/chains/cosmos"
+	"github.com/soohoio/relayer/v2/relayer/provider"
 	"go.uber.org/zap"
 
 	chantypes "github.com/cosmos/ibc-go/v5/modules/core/04-channel/types"

@@ -7,7 +7,7 @@ import (
 	"runtime/debug"
 	"strings"
 
-	"github.com/cosmos/relayer/v2/internal/relaydebug"
+	"github.com/soohoio/relayer/v2/internal/relaydebug"
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v3"
 )

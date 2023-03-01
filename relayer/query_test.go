@@ -1,7 +1,7 @@
 package relayer
 
 import (
-	"github.com/cosmos/relayer/v2/relayer/chains/cosmos"
+	"github.com/soohoio/relayer/v2/relayer/chains/cosmos"
 	"testing"
 	"time"
 

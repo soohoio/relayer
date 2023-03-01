@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	relayeribctest "github.com/cosmos/relayer/v2/ibctest"
-	"github.com/cosmos/relayer/v2/relayer"
+	relayeribctest "github.com/soohoio/relayer/v2/ibctest"
+	"github.com/soohoio/relayer/v2/relayer"
 	ibctest "github.com/strangelove-ventures/ibctest/v5"
 	"github.com/strangelove-ventures/ibctest/v5/conformance"
 	"github.com/strangelove-ventures/ibctest/v5/ibc"

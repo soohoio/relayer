@@ -12,9 +12,10 @@ import (
 	commitmenttypes "github.com/cosmos/ibc-go/v5/modules/core/23-commitment/types"
 	ibcexported "github.com/cosmos/ibc-go/v5/modules/core/exported"
 	tmclient "github.com/cosmos/ibc-go/v5/modules/light-clients/07-tendermint/types"
-	"github.com/cosmos/relayer/v2/relayer/processor"
-	"github.com/cosmos/relayer/v2/relayer/provider"
 	"github.com/gogo/protobuf/proto"
+	"github.com/soohoio/relayer/v2/relayer/chains/cosmos/stayking"
+	"github.com/soohoio/relayer/v2/relayer/processor"
+	"github.com/soohoio/relayer/v2/relayer/provider"
 	lens "github.com/strangelove-ventures/lens/client"
 	tmtypes "github.com/tendermint/tendermint/types"
 	"go.uber.org/zap"
@@ -77,6 +78,8 @@ func (pc CosmosProviderConfig) NewProvider(log *zap.Logger, homepath string, deb
 // ChainClientConfig builds a ChainClientConfig struct from a CosmosProviderConfig, this is used
 // to instantiate an instance of ChainClient from lens which is how we build the CosmosProvider
 func ChainClientConfig(pcfg *CosmosProviderConfig) *lens.ChainClientConfig {
+	modules := lens.ModuleBasics
+	modules = append(modules, stayking.AppModuleBasic{})
 	return &lens.ChainClientConfig{
 		Key:            pcfg.Key,
 		ChainID:        pcfg.ChainID,

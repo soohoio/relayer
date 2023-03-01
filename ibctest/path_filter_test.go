@@ -6,10 +6,9 @@ import (
 	"testing"
 
 	transfertypes "github.com/cosmos/ibc-go/v5/modules/apps/transfer/types"
-	relayeribctest "github.com/cosmos/relayer/v2/ibctest"
-	"github.com/cosmos/relayer/v2/relayer"
-	"github.com/cosmos/relayer/v2/relayer/processor"
-	"github.com/strangelove-ventures/ibctest/v5"
+	relayeribctest "github.com/soohoio/relayer/v2/ibctest"
+	"github.com/soohoio/relayer/v2/relayer"
+	"github.com/soohoio/relayer/v2/relayer/processor"
 	"github.com/strangelove-ventures/ibctest/v5/ibc"
 	"github.com/strangelove-ventures/ibctest/v5/test"
 	"github.com/strangelove-ventures/ibctest/v5/testreporter"

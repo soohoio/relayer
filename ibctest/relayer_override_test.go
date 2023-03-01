@@ -5,9 +5,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/cosmos/relayer/v2/cmd"
-	relayeribctest "github.com/cosmos/relayer/v2/ibctest"
-	"github.com/strangelove-ventures/ibctest/v5"
+	"github.com/soohoio/relayer/v2/cmd"
+	relayeribctest "github.com/soohoio/relayer/v2/ibctest"
 	"github.com/strangelove-ventures/ibctest/v5/chain/cosmos"
 	"github.com/strangelove-ventures/ibctest/v5/ibc"
 	ibctestrelayer "github.com/strangelove-ventures/ibctest/v5/relayer"

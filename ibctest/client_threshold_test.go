@@ -5,8 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	relayeribctest "github.com/cosmos/relayer/v2/ibctest"
-	"github.com/strangelove-ventures/ibctest/v5"
+	relayeribctest "github.com/soohoio/relayer/v2/ibctest"
 	"github.com/strangelove-ventures/ibctest/v5/ibc"
 	ibctestrelayer "github.com/strangelove-ventures/ibctest/v5/relayer"
 	"github.com/strangelove-ventures/ibctest/v5/test"

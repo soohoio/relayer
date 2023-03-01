@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cosmos/relayer/v2/relayer/provider"
+	"github.com/soohoio/relayer/v2/relayer/provider"
 	"go.uber.org/zap"
 )
 

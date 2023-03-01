@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	ibcexported "github.com/cosmos/ibc-go/v5/modules/core/exported"
-	"github.com/cosmos/relayer/v2/relayer/processor"
+	"github.com/soohoio/relayer/v2/relayer/processor"
 	"github.com/stretchr/testify/require"
 )
 

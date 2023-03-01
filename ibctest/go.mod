@@ -1,11 +1,11 @@
-module github.com/cosmos/relayer/v2/ibctest
+module github.com/soohoio/relayer/v2/ibctest
 
 go 1.19
 
 require (
 	github.com/cosmos/cosmos-sdk v0.46.7
 	github.com/cosmos/ibc-go/v5 v5.1.0
-	github.com/cosmos/relayer/v2 v2.0.0
+	github.com/soohoio/relayer/v2 v2.0.0
 	github.com/docker/docker v20.10.19+incompatible
 	github.com/moby/moby v20.10.18+incompatible
 	github.com/strangelove-ventures/ibctest/v5 v5.0.0-20221201055938-fa49178c17eb
@@ -228,7 +228,7 @@ replace (
 	github.com/ChainSafe/go-schnorrkel => github.com/ChainSafe/go-schnorrkel v0.0.0-20200405005733-88cbf1b4c40d
 	github.com/ChainSafe/go-schnorrkel/1 => github.com/ChainSafe/go-schnorrkel v1.0.0
 	// For this nested module, you always want to replace the parent reference with the current worktree.
-	github.com/cosmos/relayer/v2 => ../
+	github.com/soohoio/relayer/v2 => ../
 
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 

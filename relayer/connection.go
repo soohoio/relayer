@@ -5,8 +5,8 @@ import (
 	"time"
 
 	conntypes "github.com/cosmos/ibc-go/v5/modules/core/03-connection/types"
-	"github.com/cosmos/relayer/v2/relayer/processor"
-	"github.com/cosmos/relayer/v2/relayer/provider"
+	"github.com/soohoio/relayer/v2/relayer/processor"
+	"github.com/soohoio/relayer/v2/relayer/provider"
 	"go.uber.org/zap"
 )
 
