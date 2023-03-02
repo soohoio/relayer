@@ -523,8 +523,8 @@ github.com/shirou/gopsutil v3.21.4-0.20210419000835-c7a38de76ee5+incompatible h1
 github.com/sirupsen/logrus v1.2.0/go.mod h1:LxeOpSwHxABJmUn/MG1IvRgCAasNZTLOkJPxbbu5VWo=
 github.com/sirupsen/logrus v1.4.2/go.mod h1:tLMulIdttU9McNUspp0xgXVQah82FyeX6MwdIuYE2rE=
 github.com/sirupsen/logrus v1.6.0/go.mod h1:7uNnSEd1DgxDLC74fIahvMZmmYsHGZGEOFrfsX/uA88=
-github.com/soohoio/stayking/v2 v2.0.0 h1:9BGfS/rI2Zy3trxmYj7zaQeNwX9lKlgi46GwSEauHN0=
-github.com/soohoio/stayking/v2 v2.0.0/go.mod h1:LaXJ4mImTWUZz6pXbFYMCkgKqsSdj8jtnUF/KTH76V0=
+github.com/soohoio/stayking/v2 v2.0.1 h1:o9YTtFp9+vyLvkuWutbcQ0hH47n/BCMVPzRGyo4qR+U=
+github.com/soohoio/stayking/v2 v2.0.1/go.mod h1:LaXJ4mImTWUZz6pXbFYMCkgKqsSdj8jtnUF/KTH76V0=
 github.com/spaolacci/murmur3 v0.0.0-20180118202830-f09979ecbc72/go.mod h1:JwIasOWyU6f++ZhiEuf87xNszmSA2myDM2Kzu9HwQUA=
 github.com/spaolacci/murmur3 v1.1.0 h1:7c1g84S4BPRrfL5Xrdp6fOJ206sU9y293DDHaoy0bLI=
 github.com/spaolacci/murmur3 v1.1.0/go.mod h1:JwIasOWyU6f++ZhiEuf87xNszmSA2myDM2Kzu9HwQUA=
