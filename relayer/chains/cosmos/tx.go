@@ -29,7 +29,7 @@ import (
 	host "github.com/cosmos/ibc-go/v7/modules/core/24-host"
 	ibcexported "github.com/cosmos/ibc-go/v7/modules/core/exported"
 	tmclient "github.com/cosmos/ibc-go/v7/modules/light-clients/07-tendermint"
-	strideicqtypes "github.com/cosmos/relayer/v2/relayer/chains/cosmos/stride"
+	staykingicqtypes "github.com/cosmos/relayer/v2/relayer/chains/cosmos/stayking"
 	"github.com/cosmos/relayer/v2/relayer/provider"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/light"
@@ -1101,7 +1101,7 @@ func (cc *CosmosProvider) MsgSubmitQueryResponse(chainID string, queryID provide
 	if err != nil {
 		return nil, err
 	}
-	msg := &strideicqtypes.MsgSubmitQueryResponse{
+	msg := &staykingicqtypes.MsgSubmitQueryResponse{
 		ChainId:     chainID,
 		QueryId:     string(queryID),
 		Result:      proof.Result,

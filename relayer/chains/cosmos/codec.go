@@ -25,6 +25,7 @@ import (
 	upgradeclient "github.com/cosmos/cosmos-sdk/x/upgrade/client"
 	"github.com/cosmos/ibc-go/v7/modules/apps/transfer"
 	ibc "github.com/cosmos/ibc-go/v7/modules/core"
+	"github.com/cosmos/relayer/v2/relayer/chains/cosmos/stayking"
 
 	cosmosmodule "github.com/cosmos/relayer/v2/relayer/chains/cosmos/module"
 	"github.com/cosmos/relayer/v2/relayer/chains/cosmos/stride"
@@ -58,6 +59,7 @@ var ModuleBasics = []module.AppModuleBasic{
 	ibc.AppModuleBasic{},
 	cosmosmodule.AppModuleBasic{},
 	stride.AppModuleBasic{},
+	stayking.AppModuleBasic{},
 }
 
 type Codec struct {
