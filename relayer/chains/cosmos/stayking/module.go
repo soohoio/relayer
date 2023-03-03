@@ -1,4 +1,4 @@
-package stride
+package stayking
 
 import (
 	"encoding/json"

@@ -1,4 +1,4 @@
-package stride_test
+package stayking_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
 	chantypes "github.com/cosmos/ibc-go/v5/modules/core/04-channel/types"
-	rlystride "github.com/cosmos/relayer/v2/relayer/chains/cosmos/stride"
+	rlystayking2 "github.com/cosmos/relayer/v2/relayer/chains/cosmos/stayking"
 	"github.com/icza/dyno"
 	"github.com/strangelove-ventures/ibctest/v5/chain/cosmos"
 	"github.com/strangelove-ventures/ibctest/v5/ibc"
@@ -16,20 +16,20 @@ import (
 )
 
 const (
-	StrideAdminAccount  = "admin"
-	StrideAdminMnemonic = "tone cause tribe this switch near host damage idle fragile antique tail soda alien depth write wool they rapid unfold body scan pledge soft"
+	StayKingAdminAccount  = "admin"
+	StayKingAdminMnemonic = "tone cause tribe this switch near host damage idle fragile antique tail soda alien depth write wool they rapid unfold body scan pledge soft"
 )
 
 const (
-	DayEpochIndex    = 1
-	DayEpochLen      = "100s"
-	StrideEpochIndex = 2
-	StrideEpochLen   = "40s"
-	IntervalLen      = 1
-	VotingPeriod     = "30s"
-	MaxDepositPeriod = "30s"
-	UnbondingTime    = "200s"
-	TrustingPeriod   = "199s"
+	DayEpochIndex      = 1
+	DayEpochLen        = "100s"
+	StayKingEpochIndex = 2
+	StayKingEpochLen   = "40s"
+	IntervalLen        = 1
+	VotingPeriod       = "30s"
+	MaxDepositPeriod   = "30s"
+	UnbondingTime      = "200s"
+	TrustingPeriod     = "199s"
 )
 
 var AllowMessages = []string{
@@ -113,7 +113,7 @@ type UserRedemptionRecord struct {
 	ClaimIsPending bool   `json:"claimIsPending"`
 }
 
-func ModifyGenesisStride() func(ibc.ChainConfig, []byte) ([]byte, error) {
+func ModifyGenesisStayKing() func(ibc.ChainConfig, []byte) ([]byte, error) {
 	return func(cfg ibc.ChainConfig, genbz []byte) ([]byte, error) {
 		g := make(map[string]interface{})
 		if err := json.Unmarshal(genbz, &g); err != nil {
@@ -123,7 +123,7 @@ func ModifyGenesisStride() func(ibc.ChainConfig, []byte) ([]byte, error) {
 		if err := dyno.Set(g, DayEpochLen, "app_state", "epochs", "epochs", DayEpochIndex, "duration"); err != nil {
 			return nil, err
 		}
-		if err := dyno.Set(g, StrideEpochLen, "app_state", "epochs", "epochs", StrideEpochIndex, "duration"); err != nil {
+		if err := dyno.Set(g, StayKingEpochLen, "app_state", "epochs", "epochs", StayKingEpochIndex, "duration"); err != nil {
 			return nil, err
 		}
 		if err := dyno.Set(g, UnbondingTime, "app_state", "staking", "params", "unbonding_time"); err != nil {
@@ -159,7 +159,7 @@ func ModifyGenesisStride() func(ibc.ChainConfig, []byte) ([]byte, error) {
 	}
 }
 
-func ModifyGenesisStrideCounterparty() func(ibc.ChainConfig, []byte) ([]byte, error) {
+func ModifyGenesisStayKingCounterparty() func(ibc.ChainConfig, []byte) ([]byte, error) {
 	return func(cfg ibc.ChainConfig, genbz []byte) ([]byte, error) {
 		g := make(map[string]interface{})
 		if err := json.Unmarshal(genbz, &g); err != nil {
@@ -192,7 +192,7 @@ func PollForMsgSubmitQueryResponse(
 	chain *cosmos.CosmosChain,
 	startHeight, maxHeight uint64,
 	chainID string,
-) (*rlystride.MsgSubmitQueryResponse, error) {
+) (*rlystayking2.MsgSubmitQueryResponse, error) {
 	cdc := codec.NewProtoCodec(chain.Config().EncodingConfig.InterfaceRegistry)
 
 	doPoll := func(ctx context.Context, height uint64) (any, error) {
@@ -208,7 +208,7 @@ func PollForMsgSubmitQueryResponse(
 				continue
 			}
 			for _, msg := range sdkTx.GetMsgs() {
-				if msgSubmitQueryResponse, ok := msg.(*rlystride.MsgSubmitQueryResponse); ok {
+				if msgSubmitQueryResponse, ok := msg.(*rlystayking2.MsgSubmitQueryResponse); ok {
 					return msgSubmitQueryResponse, nil
 				}
 			}
@@ -220,7 +220,7 @@ func PollForMsgSubmitQueryResponse(
 	if err != nil {
 		return nil, err
 	}
-	return p.(*rlystride.MsgSubmitQueryResponse), nil
+	return p.(*rlystayking2.MsgSubmitQueryResponse), nil
 }
 
 // PollForMsgSubmitQueryResponse polls until finding a block with a MsgSubmitQueryResponse message

@@ -10,7 +10,6 @@ require (
 	github.com/gogo/protobuf v1.3.3
 	github.com/google/go-cmp v0.5.9
 	github.com/google/go-github/v43 v43.0.0
-	github.com/gorilla/mux v1.8.0
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/jsternberg/zap-logfmt v1.3.0
 	github.com/juju/fslock v0.0.0-20160525022230-4d5c94c67b4b

@@ -1,11 +1,10 @@
-package stride
+package stayking
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 )
 
-// Originally sourced from https://github.com/Stride-Labs/stride/blob/v5.1.1/x/interchainquery/types/msgs.go
 // Needed for cosmos sdk Msg implementation.
 
 // interchainquery message types

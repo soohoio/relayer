@@ -1,4 +1,4 @@
-package stride
+package stayking
 
 import (
 	"github.com/cosmos/cosmos-sdk/codec"
@@ -7,7 +7,6 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 
-// Originally sourced from https://github.com/Stride-Labs/stride/blob/v5.1.1/x/interchainquery/types/codec.go
 // Needed for cosmos sdk Msg implementation in messages.go.
 
 var (
@@ -16,7 +15,7 @@ var (
 )
 
 func RegisterLegacyAminoCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgSubmitQueryResponse{}, "/stride.interchainquery.MsgSubmitQueryResponse", nil)
+	cdc.RegisterConcrete(&MsgSubmitQueryResponse{}, "/stayking.interchainquery.MsgSubmitQueryResponse", nil)
 }
 
 func RegisterInterfaces(registry types.InterfaceRegistry) {

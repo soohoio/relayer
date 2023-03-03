@@ -1,13 +1,13 @@
 
 syntax = "proto3";
-package stride.interchainquery.v1;
+package stayking.interchainquery.v1;
 
 import "gogoproto/gogo.proto";
 import "cosmos_proto/cosmos.proto";
 import "tendermint/crypto/proof.proto";
 
-// NOTE: copied into this repository from "github.com/Stride-Labs/stride/v5/x/interchainquery/types"
-option go_package = "github.com/cosmos/relayer/relayer/chains/cosmos/stride";
+// NOTE: copied into this repository from "github.com/soohoio/stayking/v2/x/interchainquery/types"
+option go_package = "github.com/cosmos/relayer/relayer/chains/cosmos/stayking";
 
 // MsgSubmitQueryResponse represents a message type to fulfil a query request.
 message MsgSubmitQueryResponse {

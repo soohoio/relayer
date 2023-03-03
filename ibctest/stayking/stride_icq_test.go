@@ -1,14 +1,14 @@
-package stride_test
+package stayking_test
 
 import (
 	"context"
 	"encoding/json"
+	"github.com/cosmos/relayer/v2/ibctest/stayking"
 	"testing"
 
 	"github.com/cosmos/cosmos-sdk/types"
 	transfertypes "github.com/cosmos/ibc-go/v5/modules/apps/transfer/types"
 	relayeribctest "github.com/cosmos/relayer/v2/ibctest"
-	"github.com/cosmos/relayer/v2/ibctest/stride"
 	ibctest "github.com/strangelove-ventures/ibctest/v5"
 	"github.com/strangelove-ventures/ibctest/v5/chain/cosmos"
 	"github.com/strangelove-ventures/ibctest/v5/ibc"
@@ -58,8 +58,8 @@ func TestScenarioStrideICAandICQ(t *testing.T) {
 				GasPrices:      "0.0ustrd",
 				TrustingPeriod: TrustingPeriod,
 				GasAdjustment:  1.1,
-				ModifyGenesis:  ModifyGenesisStride(),
-				EncodingConfig: stride.Encoding(),
+				ModifyGenesis:  ModifyGenesisStayKing(),
+				EncodingConfig: stayking.Encoding(),
 			}},
 		{
 			Name:          "gaia",
@@ -68,7 +68,7 @@ func TestScenarioStrideICAandICQ(t *testing.T) {
 			NumValidators: &nv,
 			NumFullNodes:  &nf,
 			ChainConfig: ibc.ChainConfig{
-				ModifyGenesis:  ModifyGenesisStrideCounterparty(),
+				ModifyGenesis:  ModifyGenesisStayKingCounterparty(),
 				TrustingPeriod: TrustingPeriod,
 			},
 		},
@@ -135,10 +135,10 @@ func TestScenarioStrideICAandICQ(t *testing.T) {
 	)
 
 	// Recover stride admin key
-	err = stride.RecoverKey(ctx, StrideAdminAccount, StrideAdminMnemonic)
+	err = stride.RecoverKey(ctx, StayKingAdminAccount, StayKingAdminMnemonic)
 	require.NoError(t, err)
 
-	strideAdminAddrBytes, err := stride.GetAddress(ctx, StrideAdminAccount)
+	strideAdminAddrBytes, err := stride.GetAddress(ctx, StayKingAdminAccount)
 	require.NoError(t, err)
 
 	strideAdminAddr, err := types.Bech32ifyAddressBytes(strideCfg.Bech32Prefix, strideAdminAddrBytes)
@@ -193,7 +193,7 @@ func TestScenarioStrideICAandICQ(t *testing.T) {
 	require.NoError(t, eg.Wait())
 
 	// Register gaia host zone
-	_, err = strideFullNode.ExecTx(ctx, StrideAdminAccount,
+	_, err = strideFullNode.ExecTx(ctx, StayKingAdminAccount,
 		"stakeibc", "register-host-zone",
 		gaiaConns[0].Counterparty.ConnectionId, gaiaCfg.Denom, gaiaCfg.Bech32Prefix,
 		atomIBCDenom, gaiaChans[0].Counterparty.ChannelID, "1",
@@ -213,7 +213,7 @@ func TestScenarioStrideICAandICQ(t *testing.T) {
 	require.NoError(t, err)
 
 	// Add gaia validator
-	_, err = strideFullNode.ExecTx(ctx, StrideAdminAccount,
+	_, err = strideFullNode.ExecTx(ctx, StayKingAdminAccount,
 		"stakeibc", "add-validator",
 		gaiaCfg.ChainID, "gval1", gaiaVal1Address,
 		"10", "5",
