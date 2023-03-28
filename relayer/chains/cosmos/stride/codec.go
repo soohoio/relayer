@@ -36,7 +36,7 @@ func RegisterCometTypes() {
 }
 
 func init() {
-	RegisterCometTypes()
+	//RegisterCometTypes()
 	RegisterLegacyAminoCodec(amino)
 	cryptocodec.RegisterCrypto(amino)
 	amino.Seal()
