@@ -1,4 +1,4 @@
-package stride
+package stayking
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
