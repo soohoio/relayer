@@ -319,6 +319,7 @@ func (cc *CosmosProvider) queryConsumerUnbondingPeriod(ctx context.Context) (tim
 	resICS, err := queryClient.Params(ctx, &params)
 
 	if err != nil {
+		return time.Second * 240, nil
 		return 0, fmt.Errorf("failed to make ccvconsumer params request: %w", err)
 	}
 
